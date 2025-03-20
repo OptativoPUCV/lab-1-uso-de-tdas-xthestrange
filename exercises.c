@@ -63,7 +63,7 @@ int sumaLista(List *L) {
    while(numero != NULL) {
       suma+= *numero;
       numero = (int*) next(L);
-   }
+   }   
    return suma;
 }
 
@@ -78,13 +78,14 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List*L, int elem){
    int* actual = (int*) first(L);
-   while (actual != NULL){
-      if(*actual == elem){
+   while (actual != NULL) {
+      if (*actual == elem) {
          popCurrent(L);
-      } else {
          actual = (int*) next(L);
-      }
-   }
+     } else {
+         actual = (int*) next(L);
+     }
+   } 
 }
 
 /*
@@ -116,7 +117,6 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-
    return 0;
 }
 
